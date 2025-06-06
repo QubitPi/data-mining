@@ -21,12 +21,12 @@ with $n$ rows and $d$ columns, given as
         }
 \end{align*}
 \begin{itemize}
-  \item {\bf Rows}: Also called 
+  \item {\bf Rows}: Also called
 {\em instances}, {\em examples}, {\em records}, {\em
 transactions}, {\em objects}, {\em points}, {\em feature-vectors}, etc.
-Given as a $d$-tuple 
+Given as a $d$-tuple
 $$\bx_i = (x_{i1}, x_{i2}, \ldots, x_{id})$$
-\item {\bf Columns}: Also called 
+\item {\bf Columns}: Also called
 {\em attributes}, {\em properties}, {\em features}, {\em dimensions}, {\em
 variables}, {\em f\/{i}elds}, etc. Given as an $n$-tuple
 $$X_{j} = (x_{1j}, x_{2j}, \ldots, x_{nj})$$
@@ -80,10 +80,10 @@ Attributes may be classif\/{i}ed into two main types
 	  \begin{itemize}
 		\item {\em Nominal}: only equality is meaningful\\
 		  e.g., domain({\tt Sex}) = \{ {\tt M, F}\}
-		\item {\em Ordinal}: both equality (are two values the same?) 
+		\item {\em Ordinal}: both equality (are two values the same?)
 		  and inequality (is one value less than another?) are
 		  meaningful\\
-		  e.g., domain({\tt Education}) 
+		  e.g., domain({\tt Education})
 		  = \{ {\tt High School}, {\tt BS}, {\tt MS}, {\tt PhD}\}
 	  \end{itemize}
 \end{itemize}
@@ -93,8 +93,8 @@ Attributes may be classif\/{i}ed into two main types
 
 \begin{frame}{Data: Algebraic and Geometric View}
   \small
-For numeric data matrix $\bD$, 
-each row or point is a $d$-dimensional 
+For numeric data matrix $\bD$,
+each row or point is a $d$-dimensional
 column vector:
 $$\bx_i = \matr{%
     x_{i1}\\
@@ -147,7 +147,7 @@ $$X_{j} = \matr{x_{1j} & x_{2j} & \cdots & x_{nj}}^T \in \setR^n$$
 
 
 \begin{frame}{Scatterplot: 2D Iris Dataset\\
-  {\tt sepal length} versus {\tt sepal width}.} 
+  {\tt sepal length} versus {\tt sepal width}.}
 \readdata{\dataSLW}{EDA/data/figs/iris-slw.dat}
 \readdata{\dataSLWPL}{EDA/data/figs/iris-slwpl.dat}
     \centering
@@ -171,10 +171,10 @@ $$X_{j} = \matr{x_{1j} & x_{2j} & \cdots & x_{nj}}^T \in \setR^n$$
   \small
   If all attributes are numeric, then the data matrix
 $\bD$ is an $n \times d$ matrix,
- or equivalently a set of $n$ row vectors 
+ or equivalently a set of $n$ row vectors
 $\bx_i^T
-\in \setR^d$ 
-or a set of $d$ column vectors 
+\in \setR^d$
+or a set of $d$ column vectors
 $X_{j} \in \setR^n$
 \begin{align*}
         \bD = &
@@ -210,7 +210,7 @@ subtracting the mean from all the points:
         = \matr{\bz_1^T \\[0.3em] \bz_2^T \\[0.3em] \vdots \\\bz_n^T}
     \label{eq:eda:data:centered}
 \end{align}
-where $\bz_i = \bx_i - \bmu$ is a centered point, 
+where $\bz_i = \bx_i - \bmu$ is a centered point,
 and $\bone \in \setR^n$
 is the vector of ones.
 \end{frame}
@@ -219,7 +219,7 @@ is the vector of ones.
   \begin{columns}
   \begin{column}[t]{.45\textwidth}
 	\small
-  Given two points $\ba, \bb \in \setR^m$, their {\em dot product} 
+  Given two points $\ba, \bb \in \setR^m$, their {\em dot product}
   is def\/{i}ned as the scalar
 \begin{empheq}[box=\tcbhighmath]{align*}
     \ba^T\bb & = a_1b_1 + a_2b_2 + \cdots + a_mb_m\nonumber\\
@@ -284,7 +284,7 @@ with $\norm{\ba} = 1$.
   $\bp=\bb_\parallel$ parallel to
 $\ba$, and $\br=\bb_\perp$ perpendicular or orthogonal
 to $\ba$, given as
-$$\bb = \bb_\parallel + \bb_\perp = \bp + \br$$ 
+$$\bb = \bb_\parallel + \bb_\perp = \bp + \br$$
 where
 \begin{empheq}[box=\tcbhighmath]{align*}
 \bp = \bb_\parallel = \lB( {\ba^T\bb \over \ba^T\ba}
@@ -354,19 +354,19 @@ is the set of all possible outcomes of the experiment, also called the
 
 \smallskip A {\em discrete random variable}
 takes on only a f\/{i}nite
-or countably inf\/{i}nite number of values, 
+or countably inf\/{i}nite number of values,
 whereas a {\em continuous
 random variable}
 if it can take on any value in $\setR$.
 
 \medskip
-By default, a numeric attribute $X_j$ 
+By default, a numeric attribute $X_j$
 is considered as the identity random variable given as
 $$X(v) = v$$
 $\forall v \in \cO$. Here $\cO = \setR$.
 
 \begin{block}{Discrete Variable: Long Sepal Length}
-Define random variable $A$, denoting long sepal length (7cm or more) 
+Define random variable $A$, denoting long sepal length (7cm or more)
 as follows:
     \begin{align*}
         A(v) =
@@ -375,7 +375,7 @@ as follows:
             1 & \text{if } v \ge 7
         \end{cases}
     \end{align*}
-    The sample space of $A$ is $\cO = [4.3, 7.9]$, 
+    The sample space of $A$ is $\cO = [4.3, 7.9]$,
 	and its range is $\{0,1\}$. Thus, $A$ is discrete.
 \end{block}
 
@@ -395,7 +395,7 @@ $$f(x) \ge 0$$
 and the sum of all
 probabilities should add to $1$:
 $$\sum_{x} f(x) = 1$$
-Intuitively, for a discrete variable $X$, 
+Intuitively, for a discrete variable $X$,
 the probability is
 concentrated or massed at only discrete values in the range of $X$,
 and is zero for all other values.
@@ -469,7 +469,7 @@ Define discrete random variable $B$, denoting the
     \begin{align*}
         f(k) = P(B=k) = {m \choose k} p^k (1-p)^{m-k}
     \end{align*}
- 
+
 	Binomial distribution for long sepal length ($p=0.087$) for $m=10$
 	trials
 
@@ -519,7 +519,7 @@ values that it can be measured only over intervals $[a,b] \subset
 
 
 \begin{frame}{Sepal Length: Normal Distribution}
-  We model sepal length via the {\em Gaussian} or {\em normal} 
+  We model sepal length via the {\em Gaussian} or {\em normal}
     density function, given as
     \begin{align*}
     f(x) = {1 \over \sqrt{2\pi\sigma^2}}
@@ -558,7 +558,7 @@ values that it can be measured only over intervals $[a,b] \subset
   \small
   \begin{columns}
 	\column{0.45\textwidth}
-For random variable $X$, its 
+For random variable $X$, its
 {\em cumulative distribution function (CDF)}
 $F:\setR \to [0,1]$,
 gives the probability of observing a value at most
@@ -647,20 +647,20 @@ CDF for the normal distribution ($\mu=5.84, \sigma^2=0.681$)
   \small
   \begin{columns}
 	\column{0.45\textwidth}
-  Define discrete random variables 
+  Define discrete random variables
   \begin{align*}
-	\text{long sepal length:} X_1(v) = 
+	\text{long sepal length:} X_1(v) =
   \begin{cases}
 	1 & \text{if} v \ge 7\\
 	0 & \text{otherwise}
-  \end{cases}\\ 
-  \text{long sepal width:} X_2(v) = 
+  \end{cases}\\
+  \text{long sepal width:} X_2(v) =
   \begin{cases}
 	1 & \text{if} v \ge 3.5\\
 	0 & \text{otherwise}
   \end{cases}
   \end{align*}
-  
+
   \smallskip
   The bivariate random variable
   $$\bX = \matr{X_1\\ X_2}$$
@@ -669,7 +669,7 @@ CDF for the normal distribution ($\mu=5.84, \sigma^2=0.681$)
     f(\bx) & = P(\bX = \bx)\\
 	\text{i.e., } f(x_1,x_2) & = P(X_1=x_1, X_2=x_2)
 \end{align*}
-  
+
 	\column{0.5\textwidth}
     \centering
 	\small
@@ -731,7 +731,7 @@ CDF for the normal distribution ($\mu=5.84, \sigma^2=0.681$)
   \small
   \begin{columns}
 	\column{0.5\textwidth}
-  Bivariate Normal: modeling joint distribution for 
+  Bivariate Normal: modeling joint distribution for
   long sepal length ($X_1$) and sepal width ($X_2$)
     \begin{align*}
 \tiny
@@ -744,7 +744,7 @@ where $\bmu$ and $\cov$ specify the 2D mean and covariance matrix:
 \cov & = \matr{ \sigma^2_{1} & \sigma_{12}\\
 \sigma_{21} & \sigma^2_{2}}
 \end{align*}
-with mean $\mu_i = {1\over n} \sum_{k=1}^n x_{ki}$ 
+with mean $\mu_i = {1\over n} \sum_{k=1}^n x_{ki}$
 and covariance $\sigma_{ij} = {1\over n} \sum_{k=1} (x_{ki} - \mu_i)
 (x_{kj} - \mu_j)$. Also, $\sigma_i^2 = \sigma_{ii}$.
 
@@ -793,7 +793,7 @@ transform={1 1 5 scaleOpoint3d},algebraic](0,0)(10,6){
   Given a random variable $X$, a {\em random sample} of size $n$
 from $X$ is def\/{i}ned as a set of $n$ {\em independent and
 identically distributed (IID)}
-random variables 
+random variables
 $$S_1, S_2, \ldots, S_n$$
 The $S_i$'s have the same probability distribution as $X$, and are
 statistically independent.
@@ -806,7 +806,7 @@ $W_1 \subset \setR$ and $W_2 \subset \setR$, we have
     P(X_1 \in W_1 \text{ and } X_2 \in W_2) = P(X_1 \in W_1) \cdot
     P(X_2 \in W_2)
 \end{align*}
-which also implies that 
+which also implies that
 \begin{align*}
         F(\bx) & = F(x_1, x_2) = F_{1}(x_1) \cdot F_{2}(x_2)\\
         f(\bx) & = f(x_1, x_2) = f_{1}(x_1) \cdot f_{2}(x_2)
@@ -834,7 +834,7 @@ where $f_{\bX}$ is the probability mass or density function for $\bX$.
 
 \smallskip
 Assuming that the $d$
-attributes $X_1, X_2, \ldots, X_d$ are statistically independent, the 
+attributes $X_1, X_2, \ldots, X_d$ are statistically independent, the
 joint distribution for the entire dataset is given as:
 \begin{align*}
 f(\bx_1, \bx_2, \ldots, \bx_n) =
@@ -850,7 +850,7 @@ f_{X_{j}}(x_{ij})
 Let
 $\{\bS_i\}_{i=1}^m$
 be a random sample of size $m$ drawn from a (multivariate) random
-variable $\bX$. A {\em statistic} $\htheta$ is a function 
+variable $\bX$. A {\em statistic} $\htheta$ is a function
 $$\htheta\!: (\bS_1, \bS_2, \ldots, \bS_m) \to \setR$$
 
 The statistic is an estimate of the corresponding population parameter
@@ -859,8 +859,8 @@ entities under study. The statistic is itself a random variable.
 
 \bigskip
 The {\em sample mean} is a statistic, def\/{i}ned as the average
-    $$\hmu = {1 \over n} \sum_{i=1}^n x_i$$ 
-	For {\tt sepal length}, we have 
+    $$\hmu = {1 \over n} \sum_{i=1}^n x_i$$
+	For {\tt sepal length}, we have
 	$\hmu = 5.84$,
 	which is an estimator for the (unknown) true population mean sepal
 	length.
