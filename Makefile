@@ -3,7 +3,7 @@ all: ychap1.pdf ychap2.pdf ychap3.pdf ychap4.pdf ychap5.pdf ychap6.pdf ychap7.pd
 ychap1.pdf: EDA/data/ydata.tex
 	rm -f tmpyslides.*
 	echo "\def\doxdata{1} \input{yslides}" > tmpyslides.tex
-	latexmk -dvi tmpyslides.tex ;  dvipdf tmpyslides; mv tmpyslides.pdf ychap1.pdf
+	xelatex -no-pdf tmpyslides.tex ;  xdvipdfmx -v tmpyslides.xdv; mv tmpyslides.pdf ychap1.pdf
 
 ychap2.pdf: EDA/numeric/ynumeric.tex
 	rm -f tmpyslides.*
@@ -73,7 +73,7 @@ ychap14.pdf: CLUST/hierarchical/yhierarchical.tex
 ychap15.pdf: CLUST/density/ydensity.tex
 	rm -f tmpyslides.*
 	echo "\def\doxdens{1} \input{yslides}">tmpyslides.tex
-	latexmk -dvi -latex='latex --shell-escape %O %S' tmpyslides 
+	latexmk -dvi -latex='latex --shell-escape %O %S' tmpyslides
 	dvips tmpyslides;  ps2pdf -dNOSAFER tmpyslides.ps tmpyslides.pdf
 	mv tmpyslides.pdf ychap15.pdf
 
